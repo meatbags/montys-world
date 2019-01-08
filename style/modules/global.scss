@@ -1,0 +1,9 @@
+div, * {
+  box-sizing: border-box;
+  border: rgba($black, 0.1);
+}
+
+body {
+  font-family: $fontStack;
+  margin: 0;
+}
