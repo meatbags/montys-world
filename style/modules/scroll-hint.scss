@@ -1,0 +1,52 @@
+@keyframes loop {
+  0% { transform: translateY(0px); }
+  25% { transform: translateY(5px); }
+  50% { transform: translateY(0px); }
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: $marginSize;
+  pointer-events: none;
+  color: $orange;
+  font-size: $fontMedium;
+  font-weight: bold;
+  transition: $transition;
+
+  .scroll-hint__animation {
+    width: 100%;
+    height: 45px;
+    position: relative;
+
+    #scroll-animation-target, #scroll-animation-static {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #scroll-animation-target {
+      top: 9px;
+      display: flex;
+      align-items: flex-start;
+
+      img {
+        animation-name: loop;
+        animation-duration: $transitionSlow;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+    }
+  }
+
+  .scroll-hint__text {
+    padding: $space;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+}

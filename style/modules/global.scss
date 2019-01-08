@@ -1,9 +1,12 @@
 div, * {
   box-sizing: border-box;
-  border: rgba($black, 0.1);
+  outline: 1px solid rgba($black, 0.125);
 }
 
 body {
   font-family: $fontStack;
+  font-size: $fontSize;
+  color: $black;
+  line-height: $lineHeight;
   margin: 0;
 }

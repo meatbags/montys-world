@@ -1,0 +1,29 @@
+.btn {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+
+  .btn-image-active, .btn-image-hover {
+    display: none;
+  }
+
+  &:hover {
+    .btn-image-hover {
+      display: block;
+    }
+
+    .btn-image-dflt {
+      display: none;
+    }
+  }
+
+  &:active {
+    .btn-image-active {
+      display: block;
+    }
+
+    .btn-image-dflt, .btn-image-hover {
+      display: none;
+    }
+  }
+}

@@ -1,11 +1,24 @@
 // spacing
 $space: 10px;
+$marginSize: 50px;
 
 // colour
-$black: #000;
+$blue: #346094;
+$lightBlue: #4ec1e0;
+$cyan: #1E988A;
+$green: #77BC1F;
+$red: #FF5B35;
+$orange: #F6B221;
+$black: #1C1C1C;
 $white: #fff;
 
 // animation
 $transitionFast: 0.25s;
 $transition: 0.5s;
-$transitionSlow: 1.0s;
+$transitionSlow: 1.5s;
+
+// break points
+$tablet: 1100px;
+$tabletPortrait: 900px;
+$mobileLandscape: $tabletPortrait;
+$mobile: 800px;

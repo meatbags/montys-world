@@ -125,12 +125,19 @@ template {
   display: none; }
 
 /*# sourceMappingURL=normalize.min.css.map */
+.full-size, .pane {
+  width: 100%;
+  height: 100%; }
+
 div, * {
   box-sizing: border-box;
-  border: rgba(0, 0, 0, 0.1); }
+  outline: 1px solid rgba(28, 28, 28, 0.125); }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #1C1C1C;
+  line-height: 1.5;
   margin: 0; }
 
 .section {
@@ -140,6 +147,142 @@ body {
     width: 100%;
     height: 100%;
     display: flex; }
+    .section .section__inner .section__left {
+      width: 55%;
+      height: 100%;
+      position: relative; }
+    .section .section__inner .section__right {
+      width: 45%;
+      height: 100%;
+      position: relative; }
+      .section .section__inner .section__right .foreground-image {
+        position: absolute;
+        height: 75%;
+        top: 50%;
+        left: 0;
+        transform: translate(-50px, -50%); }
+        .section .section__inner .section__right .foreground-image img {
+          height: 100%;
+          width: auto; }
+    .section .section__inner .section__full {
+      width: 100%;
+      height: 100%;
+      position: relative; }
+    .section .section__inner .section__right .background-image, .section .section__inner .section__full .background-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+      .section .section__inner .section__right .background-image img, .section .section__inner .section__full .background-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+
+.pane {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .pane.pane-absolute {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .pane .pane__inner {
+    width: 50%; }
+    .pane .pane__inner .pane__title {
+      font-family: "Cabin Sketch", cursive;
+      font-size: 100px;
+      font-weight: bold;
+      color: #FF5B35;
+      line-height: normal; }
+    .pane .pane__inner .pane__heading {
+      font-family: "Gorditas", sans-serif;
+      font-size: 38px;
+      font-weight: bold;
+      color: #346094; }
+    .pane .pane__inner .pane__content ul {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+      .pane .pane__inner .pane__content ul li {
+        text-decoration: none;
+        margin-bottom: 20px; }
+        .pane .pane__inner .pane__content ul li:before {
+          content: '\2022\20'; }
+  .pane:first-child .pane__title, .pane:first-child .pane__heading {
+    text-align: center; }
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 75%;
+  width: 80%;
+  top: 50%;
+  left: 0;
+  transform: translate(-150px, -50%);
+  font-family: "Gorditas", sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 28px; }
+  .carousel .carousel__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s; }
+    .carousel .carousel__inner.transition-lock {
+      transition: none; }
+  .carousel .carousel__controls {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; }
+
+@keyframes loop {
+  0% {
+    transform: translateY(0px); }
+  25% {
+    transform: translateY(5px); }
+  50% {
+    transform: translateY(0px); } }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 50px;
+  pointer-events: none;
+  color: #F6B221;
+  font-size: 28px;
+  font-weight: bold;
+  transition: 0.5s; }
+  .scroll-hint .scroll-hint__animation {
+    width: 100%;
+    height: 45px;
+    position: relative; }
+    .scroll-hint .scroll-hint__animation #scroll-animation-target, .scroll-hint .scroll-hint__animation #scroll-animation-static {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+    .scroll-hint .scroll-hint__animation #scroll-animation-target {
+      top: 9px;
+      display: flex;
+      align-items: flex-start; }
+      .scroll-hint .scroll-hint__animation #scroll-animation-target img {
+        animation-name: loop;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out; }
+  .scroll-hint .scroll-hint__text {
+    padding: 10px; }
+  .scroll-hint.hidden {
+    opacity: 0; }
 
 .social-media-list {
   position: fixed;
@@ -148,10 +291,64 @@ body {
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  padding-left: 50px; }
+  padding-left: 50px;
+  user-select: none; }
   .social-media-list .social-media-list__item {
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 5px;
     margin-bottom: 5px; }
+    .social-media-list .social-media-list__item a {
+      width: 50px;
+      height: 50px;
+      background: #77BC1F;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .social-media-list .social-media-list__item a:hover {
+        background: #FF5B35; }
+      .social-media-list .social-media-list__item a:active {
+        background: #4ec1e0; }
+
+.corner-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 25%; }
+  .corner-logo img {
+    width: 100%;
+    height: auto; }
+
+.btn {
+  width: 60px;
+  height: 60px;
+  cursor: pointer; }
+  .btn .btn-image-active, .btn .btn-image-hover {
+    display: none; }
+  .btn:hover .btn-image-hover {
+    display: block; }
+  .btn:hover .btn-image-dflt {
+    display: none; }
+  .btn:active .btn-image-active {
+    display: block; }
+  .btn:active .btn-image-dflt, .btn:active .btn-image-hover {
+    display: none; }
+
+.footer {
+  position: absolute;
+  color: #fff;
+  padding: 50px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between; }
+  .footer .author {
+    font-family: "Gorditas", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase; }
 

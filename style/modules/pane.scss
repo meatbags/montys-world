@@ -1,0 +1,54 @@
+.pane {
+  @extend .full-size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.pane-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .pane__inner {
+    width: 50%;
+
+    .pane__title {
+      font-family: $fontStackTitle;
+      font-size: $fontHuge;
+      font-weight: bold;
+      color: $red;
+      line-height: normal;
+    }
+
+    .pane__heading {
+      font-family: $fontStackAlt;
+      font-size: $fontLarge;
+      font-weight: bold;
+      color: $blue;
+    }
+
+    .pane__content {
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+          text-decoration: none;
+          margin-bottom: $space * 2;
+
+          &:before {
+            content: '\2022\20';
+          }
+        }
+      }
+    }
+  }
+
+  &:first-child {
+    .pane__title, .pane__heading {
+      text-align: center;
+    }
+  }
+}

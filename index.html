@@ -3,6 +3,7 @@
   <head>
     <title>Monty's World</title>
     <script type='text/javascript' src='build/app.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Gorditas:700|Raleway" rel="stylesheet">
     <link rel='stylesheet' href='build/style.css'>
     <link rel='shortcut icon' type='image/png' href='assets/favicon.png'>
   </head>
@@ -10,25 +11,212 @@
     <div class='section'>
       <div class='section__inner'>
         <div class='section__left'>
+          <div class='pane'>
+            <div class='pane__inner'>
+              <h1 class='pane__title'>Monty's<br />World</h1>
+              <h2 class='pane__heading'>Subheading goes here</h2>
+              <div class='pane__side-by-side'>
+                <div class='left'>
+                  <a href='#'>
+                    <img src='assets/svg/google_play_badge.svg' alt='Google Play' />
+                  </a>
+                </div>
+                <div class='right'>
+                  <a href='#'>
+                    <img src='assets/svg/app_store.svg' alt='App Store' />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class='scroll-hint'>
+            <div class='scroll-hint__animation'>
+              <div id='scroll-animation-target'>
+                <image src='assets/svg/mouse_circle.svg' />
+              </div>
+              <div id='scroll-animation-static'>
+                <image src='assets/svg/mouse_oval.svg' />
+              </div>
+            </div>
+            <div class='scroll-hint__text'>Scroll</div>
+          </div>
+
+          <div class='corner-logo'>
+            <img src='assets/Kazoops-Logo-TM.png' alt='Kazoops Logo' />
+          </div>
         </div>
         <div class='section__right'>
-
+          <div class='background-image'>
+            <img src='assets/background-water.jpg' alt='Background image' />
+          </div>
+          <div class='foreground-image'>
+            <img src='assets/foreground-1-monty.png' alt='Monty' />
+          </div>
         </div>
       </div>
     </div>
+
     <div class='section'>
       <div class='section__inner section__inner--reverse-order-mobile'>
-        <div class='section__left'></div>
-        <div class='section__right'></div>
+        <div class='section__left'>
+          <div class='pane'>
+            <div class='pane__inner'>
+              <div class='pane__heading'>Features</div>
+              <div class='pane__content'>
+                <ul>
+                  <li>Create your own adventures in this game by building your own scene using backgrounds, characters, music and props from your favourite Kazoops episode</li>
+                  <li>Tap each asset to trigger sounds and animations</li>
+                  <li>Take photos and videos of your adventure and share with family and friends</li>
+                  <li>Save these scenes in your scrapbook and build on your creations</li>
+                  <li>Earn stickers and coins by completing challenges</li>
+                  <li>Purchase new adventure packs from your favourite episodes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='section__right'>
+          <div class='background-image'>
+            <img src='assets/background-grass.jpg' alt='Background image' />
+          </div>
+          <div class='foreground-image'>
+            <img src='assets/foreground-2-family.png' alt='Family' />
+          </div>
+        </div>
       </div>
     </div>
 
+    <div class='section'>
+      <div class='section__inner'>
+        <div class='section__left'>
+          <div class='pane'>
+            <div class='pane__inner'>
+              <div class='pane__heading'>Game Play</div>
+            </div>
+          </div>
+        </div>
+        <div class='section__right'>
+          <div class='background-image'>
+            <img src='assets/background-road.jpg' alt='Background image' />
+          </div>
+          <div class='carousel'>
+            <div id='carousel-slider' class='carousel__inner'>
+              <div class='carousel__slide'>
+                <img src='assets/screenshot_gameplay.png' alt='Carousel Slide 1' />
+              </div>
+              <div class='carousel__slide'>
+                <img src='assets/screenshot_gameplay.png' alt='Carousel Slide 2' />
+              </div>
+              <div class='carousel__slide'>
+                <img src='assets/screenshot_gameplay.png' alt='Carousel Slide 3' />
+              </div>
+            </div>
+            <div class='carousel__controls'>
+              <div id='carousel-button-left' class='btn'>
+                <img class='btn-image-dflt' src='assets/svg/arrow_left.svg' alt='Left' />
+                <img class='btn-image-hover' src='assets/svg/arrow_left_hover.svg' alt='Left' />
+                <img class='btn-image-active' src='assets/svg/arrow_left_active.svg' alt='Left' />
+              </div>
+              <div id='carousel-button-right' class='btn'>
+                <img class='btn-image-dflt' src='assets/svg/arrow_right.svg' alt='Right' />
+                <img class='btn-image-hover' src='assets/svg/arrow_right_hover.svg' alt='Right' />
+                <img class='btn-image-active' src='assets/svg/arrow_right_active.svg' alt='Right' />
+              </div>
+              <div class='carousel__counter'>
+                <span id='carousel-slide-index-current'></span> / <span id='carousel-slide-index-max'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='section'>
+      <div class='section__inner'>
+        <div class='section__left'>
+          <div class='pane'>
+            <div class='pane__inner'>
+              <div class='pane__heading'>About Us</div>
+              <div class='pane__content'>
+                <ul>
+                  <li>Create your own adventures in this game by building your own scene using backgrounds, characters, music and props from your favourite Kazoops episode</li>
+                  <li>Tap each asset to trigger sounds and animations</li>
+                  <li>Take photos and videos of your adventure and share with family and friends</li>
+                  <li>Save these scenes in your scrapbook and build on your creations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='section__right'>
+          <div class='background-image'>
+            <img src='assets/background-sand.jpg' alt='Background image' />
+          </div>
+          <div class='foreground-image'>
+            <img src='assets/foreground-3-betty.png' alt='Betty' />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='section'>
+      <div class='section__inner'>
+        <div class='section__full'>
+          <div class='background-image'>
+            <img src='assets/background-paper.jpg' alt='Background image' />
+          </div>
+          <div class='pane pane-absolute'>
+            <div class='pane__inner'>
+              <div class='pane__logo'>
+                <img src='assets/Kazoops-Logo-TM.png' alt='Kazoops Logo' />
+              </div>
+              <div class='pane__side-by-side'>
+                <div class='left'>
+                  <a href='#'>
+                    <img src='assets/svg/google_play_badge.svg' alt='Google Play' />
+                  </a>
+                </div>
+                <div class='right'>
+                  <a href='#'>
+                    <img src='assets/svg/app_store.svg' alt='App Store' />
+                  </a>
+                </div>
+              </div>
+              <div>
+                <div id='btn-back-to-top' class='btn'>
+                  <img class='btn-image-dflt' src='assets/svg/arrow_up.svg' alt='Up' />
+                  <img class='btn-image-hover' src='assets/svg/arrow_up_hover.svg' alt='Up' />
+                  <img class='btn-image-active' src='assets/svg/arrow_up_active.svg' alt='Up' />
+                </div>
+                <div class=''>Back to top</div>
+              </div>
+            </div>
+          </div>
+          <div class='footer'>
+            <div class='copyright'>&copy; Kazoops 2018</div>
+            <div class='author'>MADE BY CYPHA</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class='social-media-list'>
-      <div class='social-media-list__item'>FB</div>
-      <div class='social-media-list__item'>Twitter</div>
-      <div class='social-media-list__item'>Insta</div>
+      <div class='social-media-list__item'>
+        <a href='#'>
+          <image src='assets/svg/facebook.svg' alt='Facebook Logo' />
+        </a>
+      </div>
+      <div class='social-media-list__item'>
+        <a href='#'>
+          <image src='assets/svg/twitter.svg' alt='Twitter Logo' />
+        </a>
+      </div>
+      <div class='social-media-list__item'>
+        <a href='#'>
+          <image src='assets/svg/insta.svg' alt='Instagram Logo' />
+        </a>
+      </div>
     </div>
   </body>
 </html>

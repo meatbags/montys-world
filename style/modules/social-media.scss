@@ -5,9 +5,28 @@
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  padding-left: 50px;
+  padding-left: $marginSize;
+  user-select: none;
 
   .social-media-list__item {
     @include margin(0, 0.5);
+
+    a {
+      width: $marginSize;
+      height: $marginSize;
+      background: $green;
+      border-radius: $marginSize;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background: $red;
+      }
+
+      &:active {
+        background: $lightBlue;
+      }
+    }
   }
 }

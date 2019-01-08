@@ -8,15 +8,55 @@
     display: flex;
 
     .section__left {
-
+      width: 55%;
+      height: 100%;
+      position: relative;
     }
 
     .section__right {
+      width: 45%;
+      height: 100%;
+      position: relative;
 
+      .foreground-image {
+        position: absolute;
+        height: 75%;
+        top: 50%;
+        left: 0;
+        transform: translate(-$marginSize, -50%);
+
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+
+    .section__full {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .section__right, .section__full {
+      .background-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 
   .section__inner--reverse-order-mobile {
+    @media screen and (max-width: $mobile) {
 
+    }
   }
 }

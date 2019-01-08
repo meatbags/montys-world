@@ -1,0 +1,13 @@
+.corner-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: $marginSize;
+  margin-top: $marginSize;
+  width: 25%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
