@@ -1,7 +1,3 @@
-// spacing
-$space: 10px;
-$marginSize: 50px;
-
 // colour
 $blue: #346094;
 $lightBlue: #4ec1e0;
@@ -15,10 +11,20 @@ $white: #fff;
 // animation
 $transitionFast: 0.25s;
 $transition: 0.5s;
-$transitionSlow: 1.5s;
+$transitionSlow: 1.3s;
 
 // break points
 $tablet: 1100px;
 $tabletPortrait: 900px;
 $mobileLandscape: $tabletPortrait;
 $mobile: 800px;
+
+// height
+$indexMenu: 100;
+$indexOverlay: 200;
+
+// sizing
+$space: 10px;
+$marginSize: 50px;
+$socialMediaIconSize: 40px;
+$logoWidth: 160px;

@@ -8,23 +8,20 @@
     <link rel='shortcut icon' type='image/png' href='assets/favicon.png'>
   </head>
   <body>
+    <!-- Home -->
     <div class='section'>
       <div class='section__inner'>
         <div class='section__left'>
-          <div class='pane'>
+          <div class='pane pane--centre'>
             <div class='pane__inner'>
               <h1 class='pane__title'>Monty's<br />World</h1>
               <h2 class='pane__heading'>Subheading goes here</h2>
-              <div class='pane__side-by-side'>
-                <div class='left'>
-                  <a href='#'>
-                    <img src='assets/svg/google_play_badge.svg' alt='Google Play' />
-                  </a>
+              <div class='diptych'>
+                <div class='diptych__panel'>
+                  <a href='#'><img src='assets/svg/google_play_badge.svg' alt='Google Play' /></a>
                 </div>
-                <div class='right'>
-                  <a href='#'>
-                    <img src='assets/svg/app_store.svg' alt='App Store' />
-                  </a>
+                <div class='diptych__panel'>
+                  <a href='#'><img src='assets/svg/app_store.svg' alt='App Store' /></a>
                 </div>
               </div>
             </div>
@@ -57,6 +54,7 @@
       </div>
     </div>
 
+    <!-- Features -->
     <div class='section'>
       <div class='section__inner section__inner--reverse-order-mobile'>
         <div class='section__left'>
@@ -87,6 +85,7 @@
       </div>
     </div>
 
+    <!-- Game play -->
     <div class='section'>
       <div class='section__inner'>
         <div class='section__left'>
@@ -111,6 +110,12 @@
               <div class='carousel__slide'>
                 <img src='assets/screenshot_gameplay.png' alt='Carousel Slide 3' />
               </div>
+              <div class='carousel__slide'>
+                <img src='assets/screenshot_gameplay.png' alt='Carousel Slide 4' />
+              </div>
+              <div class='carousel__slide'>
+                <img src='assets/screenshot_gameplay.png' alt='Carousel Slide 5' />
+              </div>
             </div>
             <div class='carousel__controls'>
               <div id='carousel-button-left' class='btn'>
@@ -132,6 +137,7 @@
       </div>
     </div>
 
+    <!-- ABOUT -->
     <div class='section'>
       <div class='section__inner'>
         <div class='section__left'>
@@ -145,6 +151,14 @@
                   <li>Take photos and videos of your adventure and share with family and friends</li>
                   <li>Save these scenes in your scrapbook and build on your creations</li>
                 </ul>
+                <div class='diptych'>
+                  <div class='diptych__panel'>
+                    <a href='#'><img src='assets/svg/google_play_badge.svg' alt='Google Play' /></a>
+                  </div>
+                  <div class='diptych__panel'>
+                    <a href='#'><img src='assets/svg/app_store.svg' alt='App Store' /></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -160,6 +174,7 @@
       </div>
     </div>
 
+    <!-- Footer -->
     <div class='section'>
       <div class='section__inner'>
         <div class='section__full'>
@@ -171,16 +186,13 @@
               <div class='pane__logo'>
                 <img src='assets/Kazoops-Logo-TM.png' alt='Kazoops Logo' />
               </div>
-              <div class='pane__side-by-side'>
-                <div class='left'>
-                  <a href='#'>
-                    <img src='assets/svg/google_play_badge.svg' alt='Google Play' />
-                  </a>
+              <br /><br />
+              <div class='diptych'>
+                <div class='diptych__panel'>
+                  <a href='#'><img src='assets/svg/google_play_badge.svg' alt='Google Play' /></a>
                 </div>
-                <div class='right'>
-                  <a href='#'>
-                    <img src='assets/svg/app_store.svg' alt='App Store' />
-                  </a>
+                <div class='diptych__panel'>
+                  <a href='#'><img src='assets/svg/app_store.svg' alt='App Store' /></a>
                 </div>
               </div>
               <div>
@@ -195,25 +207,55 @@
           </div>
           <div class='footer'>
             <div class='copyright'>&copy; Kazoops 2018</div>
-            <div class='author'>MADE BY CYPHA</div>
+            <div class='author'><a href='http://www.cyphainteractive.com.au/' target='_blank'>MADE BY CYPHA</a></div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Menu -->
+    <div id='menu' class='menu'>
+      <div class='background-image'>
+        <img src='assets/background-menu.jpg' alt='Menu Background' />
+      </div>
+      <div class='menu__inner'>
+        <div class='menu__list'>
+          <div class='menu__item'>Home</div>
+          <div class='menu__item'>Features</div>
+          <div class='menu__item'>Game Play</div>
+          <div class='menu__item'>About Us</div>
+        </div>
+        <div class='diptych'>
+          <div class='diptych__panel'>
+            <a href='#'><img src='assets/svg/google_play_badge.svg' alt='Google Play' /></a>
+          </div>
+          <div class='diptych__panel'>
+            <a href='#'><img src='assets/svg/app_store.svg' alt='App Store' /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id='menu-button' class='menu-button'>
+      <div class='bar'></div>
+      <div class='bar'></div>
+      <div class='bar'></div>
+    </div>
+
+    <!-- Social media sticky -->
     <div class='social-media-list'>
       <div class='social-media-list__item'>
-        <a href='#'>
+        <a href='https://www.facebook.com/wearecypha/' target='_blank'>
           <image src='assets/svg/facebook.svg' alt='Facebook Logo' />
         </a>
       </div>
       <div class='social-media-list__item'>
-        <a href='#'>
+        <a href='https://twitter.com/wearecypha' target='_blank'>
           <image src='assets/svg/twitter.svg' alt='Twitter Logo' />
         </a>
       </div>
       <div class='social-media-list__item'>
-        <a href='#'>
+        <a href='https://www.instagram.com/wearecypha/' target='_blank'>
           <image src='assets/svg/insta.svg' alt='Instagram Logo' />
         </a>
       </div>

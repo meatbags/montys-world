@@ -7,15 +7,16 @@
   flex-direction: column;
   padding-left: $marginSize;
   user-select: none;
+  z-index: $indexOverlay;
 
   .social-media-list__item {
     @include margin(0, 0.5);
 
     a {
-      width: $marginSize;
-      height: $marginSize;
+      width: $socialMediaIconSize;
+      height: $socialMediaIconSize;
       background: $green;
-      border-radius: $marginSize;
+      border-radius: $socialMediaIconSize;
       display: flex;
       justify-content: center;
       align-items: center;

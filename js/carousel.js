@@ -1,7 +1,7 @@
-/**
- ** Carousel
- ** Simple carousel functionality.
- **/
+/*
+ * Carousel
+ * Simple carousel functionality.
+ */
 
 class Carousel {
   constructor() {

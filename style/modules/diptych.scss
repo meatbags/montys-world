@@ -1,0 +1,10 @@
+.diptych {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: $marginSize;
+
+    .diptych__panel {
+      padding: 0;
+    }
+}

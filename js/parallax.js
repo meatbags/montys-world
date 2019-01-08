@@ -1,7 +1,7 @@
-/**
- ** Parallax
- ** Handle parallax events.
- **/
+/*
+ * Parallax
+ * Handle parallax events and animations.
+ */
 
 class Parallax {
   constructor() {

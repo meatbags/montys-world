@@ -9,9 +9,10 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding-bottom: $marginSize;
+  padding-bottom: $space;
   pointer-events: none;
   color: $orange;
+  font-family: $fontStackAlt;
   font-size: $fontMedium;
   font-weight: bold;
   transition: $transition;

@@ -19,6 +19,8 @@
       font-weight: bold;
       color: $red;
       line-height: normal;
+      padding: 0;
+      margin: 0;
     }
 
     .pane__heading {
@@ -36,7 +38,7 @@
 
         li {
           text-decoration: none;
-          margin-bottom: $space * 2;
+          margin-bottom: $space * 1.5;
 
           &:before {
             content: '\2022\20';
@@ -46,7 +48,7 @@
     }
   }
 
-  &:first-child {
+  &.pane--centre {
     .pane__title, .pane__heading {
       text-align: center;
     }
