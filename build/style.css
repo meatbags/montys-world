@@ -293,8 +293,7 @@ h1, h2 {
         .pane .pane__inner .pane__heading {
           text-align: center; }
       .pane.pane--footer .pane__inner {
-        height: 100%;
-        border: 1px solid red; }
+        height: 100%; }
         .pane.pane--footer .pane__inner .pane__logo {
           width: 100%; }
           .pane.pane--footer .pane__inner .pane__logo img {
