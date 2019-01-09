@@ -3,8 +3,11 @@
  * Menu functionality.
  */
 
+import { mobileCheck } from './mobile_check';
+
 class Menu {
   constructor() {
+    this.isMobile = mobileCheck();
     this.timeoutMenu = 200;
     this.timeoutMenuItem = 150;
     this.target = {
@@ -15,11 +18,10 @@ class Menu {
     };
 
     // bind events
-    this.target.menuButton.addEventListener('mousedown', () => { this.toggleMenu(); });
-    this.target.menuButton.addEventListener('touchstart', () => { this.toggleMenu(); });
+    const eventType = this.isMobile ? 'touchstart' : 'mousedown';
+    this.target.menuButton.addEventListener(eventType, () => { this.toggleMenu(); });
     this.target.menuItems.forEach(el => {
-      el.addEventListener('mousedown', evt => { this.onMenuItem(evt); });
-      el.addEventListener('touchstart', evt => { this.onMenuItem(evt); });
+      el.addEventListener(eventType, evt => { this.onMenuItem(evt); });
     });
   }
 

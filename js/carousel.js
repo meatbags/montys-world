@@ -3,9 +3,12 @@
  * Simple carousel functionality.
  */
 
+import { mobileCheck } from './mobile_check';
+
 class Carousel {
   constructor() {
     // get targets
+    this.isMobile = mobileCheck();
     this.target = {
       carousel: document.querySelector('#carousel'),
       buttonLeft: document.querySelector('#carousel-button-left'),
@@ -20,10 +23,9 @@ class Carousel {
     this.maxIndex = this.target.slides.length - 1;
 
     // bind controls
-    this.target.buttonLeft.addEventListener('mousedown', () => { this.goToIndex(this.currentIndex - 1); });
-    this.target.buttonRight.addEventListener('mousedown', () => { this.goToIndex(this.currentIndex + 1); });
-    this.target.buttonLeft.addEventListener('touchstart', () => { this.goToIndex(this.currentIndex - 1); });
-    this.target.buttonRight.addEventListener('touchstart', () => { this.goToIndex(this.currentIndex + 1); });
+    const eventType = this.isMobile ? 'touchstart' : 'mousedown';
+    this.target.buttonLeft.addEventListener(eventType, () => { this.goToIndex(this.currentIndex - 1); });
+    this.target.buttonRight.addEventListener(eventType, () => { this.goToIndex(this.currentIndex + 1); });
     window.addEventListener('resize', () => { this.resize(); });
 
     // initialise carousel

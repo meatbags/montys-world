@@ -295,10 +295,14 @@ h1, h2 {
       .pane.pane--footer .pane__inner {
         height: 100%; }
         .pane.pane--footer .pane__inner .pane__logo {
-          width: 100%; }
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
           .pane.pane--footer .pane__inner .pane__logo img {
-            width: 100%;
-            height: auto; } }
+            width: 80%;
+            height: auto;
+            object-fit: contain; } }
 
 .menu {
   position: fixed;
