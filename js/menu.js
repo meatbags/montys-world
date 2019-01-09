@@ -15,11 +15,11 @@ class Menu {
     };
 
     // bind events
-    this.target.menuButton.addEventListener('click', () => {
-      this.toggleMenu();
-    });
+    this.target.menuButton.addEventListener('mousedown', () => { this.toggleMenu(); });
+    this.target.menuButton.addEventListener('touchstart', () => { this.toggleMenu(); });
     this.target.menuItems.forEach(el => {
-      el.addEventListener('click', evt => { this.onMenuItem(evt); });
+      el.addEventListener('mousedown', evt => { this.onMenuItem(evt); });
+      el.addEventListener('touchstart', evt => { this.onMenuItem(evt); });
     });
   }
 

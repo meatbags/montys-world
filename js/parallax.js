@@ -18,13 +18,15 @@ class Parallax {
     // bind scroll
     window.addEventListener('scroll', () => { this.parallax(); });
 
-    // back to top
+    // bind back-to-top
+    const goToTop = () => {
+      if (!this.lock) {
+        this.scrollTo(this.target.sections[0], 2);
+      }
+    };
     document.querySelectorAll('.back-to-top').forEach(el => {
-      el.addEventListener('click', () => {
-        if (!this.lock) {
-          this.scrollTo(this.target.sections[0], 2);
-        }
-      });
+      el.addEventListener('mousedown', () => { goToTop(); });
+      el.addEventListener('touchstart', () => { goToTop(); });
     });
 
     // prevent scrolling defaults
