@@ -59,10 +59,12 @@ class Parallax {
 
   resize() {
     // snap to nearest section
-    const index = this.getCurrentIndex();
-    const top = this.target.sections[index].getBoundingClientRect().top;
-    document.documentElement.scrollTop += top;
-    document.body.scrollTop += top;
+    if (!this.isMobile) {
+      const index = this.getCurrentIndex();
+      const top = this.target.sections[index].getBoundingClientRect().top;
+      document.documentElement.scrollTop += top;
+      document.body.scrollTop += top;
+    }
   }
 
   getCurrentIndex() {
