@@ -11,6 +11,7 @@
   transition: $transition;
   opacity: 0;
   pointer-events: none;
+  @extend .no-select;
 
   &.active {
     opacity: 1;
@@ -22,18 +23,24 @@
 
     .menu__list {
       font-family: $fontStackAlt;
-      font-size: $fontMedium;
       color: $white;
+      @extend .font-large;
 
       .menu__item {
         text-align: center;
         transform: translateX(-$space);
         opacity: 0;
         transition: $transition;
+        margin-bottom: $menuSpacing;
+        cursor: pointer;
 
         &.active {
           opacity: 1;
           transform: translateX(0);
+        }
+
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }

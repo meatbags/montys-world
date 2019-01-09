@@ -1,6 +1,6 @@
 div, * {
   box-sizing: border-box;
-  //outline: 1px solid rgba($black, 0.125);
+  outline: 1px solid rgba($black, 0.125);
 }
 
 body {
@@ -9,4 +9,10 @@ body {
   color: $black;
   line-height: $lineHeight;
   margin: 0;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
 }

@@ -1,13 +1,20 @@
 .corner-logo {
-  position: absolute;
+  @extend .no-select;
+  position: fixed;
   top: 0;
   left: 0;
   margin-left: $marginSize;
   margin-top: $marginSize;
   width: $logoWidth;
+  z-index: $indexLogo;
 
   img {
     width: 100%;
     height: auto;
+  }
+
+  @media screen and (max-width: $mobile) {
+    margin-left: $marginSizeMobile;
+    margin-top: $marginSizeMobile;
   }
 }

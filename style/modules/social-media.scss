@@ -5,9 +5,9 @@
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  padding-left: $marginSize;
   user-select: none;
   z-index: $indexOverlay;
+  padding-left: $marginSize;
 
   .social-media-list__item {
     @include margin(0, 0.5);
@@ -29,5 +29,9 @@
         background: $lightBlue;
       }
     }
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding-left: $marginSizeMobile;
   }
 }

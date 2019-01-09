@@ -1,0 +1,19 @@
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: $diptychMarginTop;
+
+  .btn {
+
+  }
+
+  .back-to-top__prompt {
+    color: $white;
+    font-family: $fontStackAlt;
+    font-size: $fontMedium;
+    font-weight: bold;
+    margin-left: $space;
+    cursor: pointer;
+  }
+}

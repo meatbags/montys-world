@@ -1,21 +1,18 @@
 .pane {
   @extend .full-size;
+  width: calc(100% - 100px);
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  &.pane-absolute {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  justify-content: center;
+  //margin-right: $marginSize * 2;
 
   .pane__inner {
     width: 50%;
+    position: relative;
 
     .pane__title {
       font-family: $fontStackTitle;
-      font-size: $fontHuge;
+      @extend .font-huge;
       font-weight: bold;
       color: $red;
       line-height: normal;
@@ -25,9 +22,10 @@
 
     .pane__heading {
       font-family: $fontStackAlt;
-      font-size: $fontLarge;
       font-weight: bold;
       color: $blue;
+      margin-bottom: $headingMarginBottom;
+      @extend .font-large;
     }
 
     .pane__content {
@@ -48,9 +46,46 @@
     }
   }
 
-  &.pane--centre {
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+    height: auto;
+    padding-left: $marginSizeMobile;
+    padding-right: $marginSizeMobile;
+
+    .pane__inner {
+      width: 100%;
+
+      .pane__heading {
+        text-align: center;
+      }
+    }
+  }
+
+  &.pane--home {
+    .pane__inner {
+      //width: 74%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .pane__title, .pane__heading {
       text-align: center;
+    }
+  }
+
+  &.pane--footer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    .pane__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 }

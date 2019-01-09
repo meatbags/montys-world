@@ -15,14 +15,17 @@
   }
 
   .author {
-    font-family: $fontStackAlt;
-    font-size: $fontMedium;
-    font-weight: bold;
+    font-family: $fontStackCredit;
+    font-size: $fontSmall;
     text-transform: uppercase;
   }
 
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  &.footer--menu {
+    justify-content: flex-end;
   }
 }

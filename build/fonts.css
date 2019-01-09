@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'SketchBlock';
+  src: url('../assets/fonts/sketch_block2.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HDVComicSerifPro';
+  src: url('../assets/fonts/hdv_comic_serif_pro.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Norwester';
+  src: url('../assets/fonts/norwester.otf') format('opentype');
+}

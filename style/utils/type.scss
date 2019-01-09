@@ -1,8 +1,41 @@
 $fontStack: 'Raleway', sans-serif;
-$fontStackAlt: 'Gorditas', sans-serif;
-$fontStackTitle: 'Cabin Sketch', cursive;
-$fontSize: 16px;
-$fontMedium: 28px;
-$fontLarge: 48px;
-$fontHuge: 120px;
-$lineHeight: 1.5;
+$fontStackAlt: 'HDVComicSerifPro', sans-serif;
+$fontStackTitle: 'SketchBlock', cursive;
+$fontStackCredit: 'Norwester', sans-serif;
+
+// font sizes
+$fontSize: 15px;
+$lineHeight: 28px;
+$fontSmall: 20px;
+$fontMedium: 20px;
+$lineHeightMedium: 20px;
+
+// responsive sizes
+$fontLarge: 40px;
+$fontLargeMobile: 26px;
+$lineHeightLarge: 48px;
+$lineHeightLargeMobile: $lineHeightLarge;
+$fontHuge: 95px;
+$fontHugeMobile: 57px;
+$lineHeightHuge: 105px;
+$lineHeightHugeMobile: 63px;
+
+.font-large {
+  font-size: $fontLarge;
+  line-height: $lineHeightLarge;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $fontLargeMobile;
+    line-height: $lineHeightLargeMobile;
+  }
+}
+
+.font-huge {
+  font-size: $fontHuge;
+  line-height: $lineHeightHuge;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $fontHugeMobile;
+    line-height: $lineHeightHugeMobile;
+  }
+}

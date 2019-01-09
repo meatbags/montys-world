@@ -10,8 +10,8 @@ $white: #fff;
 
 // animation
 $transitionFast: 0.25s;
-$transition: 0.5s;
-$transitionSlow: 1.3s;
+$transition: 0.4s;
+$transitionSlow: 1s;
 
 // break points
 $tablet: 1100px;
@@ -22,9 +22,18 @@ $mobile: 800px;
 // height
 $indexMenu: 100;
 $indexOverlay: 200;
+$indexLogo: 200;
+$indexWrapper: 1;
 
 // sizing
 $space: 10px;
 $marginSize: 50px;
-$socialMediaIconSize: 40px;
-$logoWidth: 160px;
+$marginSizeMobile: 20px;
+$socialMediaIconSize: 34px;
+$logoWidth: 140px;
+$menuSpacing: 43px;
+$headingMarginBottom: 34px;
+$diptychMarginTop: 90px;
+$hamburgerSize: 50px;
+$hamburgerSizeMobile: 35px;
+$mobileNavSize: 74px;

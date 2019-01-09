@@ -14,6 +14,7 @@
   color: $orange;
   font-family: $fontStackAlt;
   font-size: $fontMedium;
+  line-height: $lineHeightMedium;
   font-weight: bold;
   transition: $transition;
 
@@ -49,5 +50,9 @@
 
   &.hidden {
     opacity: 0;
+  }
+
+  @media screen and (max-width: $mobile) {
+    display: none;
   }
 }

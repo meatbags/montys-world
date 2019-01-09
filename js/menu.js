@@ -13,9 +13,27 @@ class Menu {
       sections: document.querySelectorAll('.section'),
       menuItems: document.querySelectorAll('.menu__item'),
     };
+
+    // bind events
     this.target.menuButton.addEventListener('click', () => {
       this.toggleMenu();
     });
+    this.target.menuItems.forEach(el => {
+      el.addEventListener('click', evt => { this.onMenuItem(evt); });
+    });
+  }
+
+  onMenuItem(evt) {
+    // jump to target and close menu
+    if (!this.lock) {
+      const target = evt.currentTarget.dataset.target;
+      const el = document.querySelector(target);
+      if (el) {
+        const box = el.getBoundingClientRect();
+        document.documentElement.scrollTop += box.top;
+        this.toggleMenu();
+      }
+    }
   }
 
   toggleMenu() {
