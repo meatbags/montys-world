@@ -10,8 +10,9 @@
 
   &.diptych--about-us {
     margin-top: $diptychMarginTop / 2;
+
     .diptych__panel {
-      @include margin(1, 0);
+      @include margin(1.5, 0);
     }
   }
 

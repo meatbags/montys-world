@@ -20,8 +20,8 @@ class Carousel {
     this.maxIndex = this.target.slides.length - 1;
 
     // bind controls
-    this.target.buttonLeft.addEventListener('click', () => { this.goToIndex(this.currentIndex - 1); });
-    this.target.buttonRight.addEventListener('click', () => { this.goToIndex(this.currentIndex + 1); });
+    this.target.buttonLeft.addEventListener('mousedown', () => { this.goToIndex(this.currentIndex - 1); });
+    this.target.buttonRight.addEventListener('mousedown', () => { this.goToIndex(this.currentIndex + 1); });
     window.addEventListener('resize', () => { this.resize(); });
 
     // initialise carousel

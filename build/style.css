@@ -464,8 +464,8 @@ h1, h2 {
     position: relative;
     margin-top: 20px; }
     .carousel .carousel__controls .btn {
-      margin-left: 5px;
-      margin-right: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
       margin-top: 0px;
       margin-bottom: 0px; }
     .carousel .carousel__controls .carousel__counter {
@@ -669,8 +669,8 @@ h1, h2 {
   .diptych.diptych--about-us {
     margin-top: 45px; }
     .diptych.diptych--about-us .diptych__panel {
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-left: 15px;
+      margin-right: 15px;
       margin-top: 0px;
       margin-bottom: 0px; }
   @media screen and (max-width: 800px) {
