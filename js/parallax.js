@@ -60,7 +60,9 @@ class Parallax {
   resize() {
     // snap to nearest section
     const index = this.getCurrentIndex();
-    document.documentElement.scrollTop += this.target.sections[index].getBoundingClientRect().top;
+    const top = this.target.sections[index].getBoundingClientRect().top;
+    document.documentElement.scrollTop += top;
+    document.body.scrollTop += top;
   }
 
   getCurrentIndex() {
@@ -95,7 +97,7 @@ class Parallax {
 
   scrollTo(el, dur) {
     // set animation
-    this.animation.start = document.documentElement.scrollTop;
+    this.animation.start = document.documentElement.scrollTop || document.body.scrollTop;
     this.animation.stop = this.animation.start + el.getBoundingClientRect().top;
     this.animation.range = this.animation.stop - this.animation.start;
     this.animation.time = (new Date()).getTime();
@@ -117,12 +119,14 @@ class Parallax {
       // check if done
       if (this.animation.age >= this.animation.duration) {
         document.documentElement.scrollTop = this.animation.stop;
+        document.body.scrollTop = this.animation.stop;
         this.lock = false;
       } else {
         let t = this.animation.age / this.animation.duration;
         t = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
         const res = this.animation.start + Math.round(this.animation.range * t);
         document.documentElement.scrollTop = res;
+        document.body.scrollTop = res;
         this.animation.time = now;
       }
     }
