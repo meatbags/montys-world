@@ -16,4 +16,8 @@
     margin-left: $space;
     cursor: pointer;
   }
+
+  @media screen and (max-width: $mobile) {
+    margin-top: $space * 2.5;
+  }
 }

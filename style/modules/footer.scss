@@ -28,4 +28,12 @@
   &.footer--menu {
     justify-content: flex-end;
   }
+
+  @media screen and (max-width: $mobile) {
+    padding: $marginSizeMobile;
+
+    &.footer--menu {
+      justify-content: space-between;
+    }
+  }
 }

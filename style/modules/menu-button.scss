@@ -18,6 +18,10 @@
   }
 
   &.active {
+    .bar {
+      background: $white;
+    }
+
     .bar:first-child {
       transform: translate(0, 14px) rotate(45deg);
     }

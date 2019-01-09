@@ -31,7 +31,29 @@
     }
   }
 
-  @media screen and (max-width: $mobile) {
-    padding-left: $marginSizeMobile;
+  &.social-media-list--inline {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    flex-direction: row;
+    padding-left: 0;
+    margin-top: $space * 0.5;
+
+    .social-media-list__item {
+      @include pad(1, 1);
+    }
+  }
+
+  &.social-media-list--centre {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &.social-media-list--mobile-menu {
+    .social-media-list__item {
+      padding: 0;
+      padding-right: 10px;
+      margin-bottom: 0;
+    }
   }
 }

@@ -15,12 +15,6 @@
     }
   }
 
-  &.diptych--footer {
-    .diptych__panel {
-      img {}
-    }
-  }
-
   @media screen and (max-width: $mobile) {
     //margin-top: $diptychMarginTop / 2;
     padding-left: $marginSizeMobile;
@@ -32,6 +26,14 @@
         height: 100%;
         object-fit: contain;
       }
+    }
+
+    &.diptych--footer {
+      margin-top: $space * 2.5;
+    }
+
+    &.diptych--menu {
+      margin-top: 76px;
     }
   }
 }
