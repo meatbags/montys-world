@@ -339,7 +339,8 @@ h1, h2 {
           margin-bottom: 0; }
   @media screen and (max-width: 800px) {
     .menu .menu__inner .menu__list .menu__item {
-      margin-bottom: 26px; } }
+      margin-top: 13px;
+      margin-bottom: 13px; } }
 
 .menu-button {
   position: fixed;

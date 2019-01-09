@@ -33,6 +33,7 @@ class Menu {
       if (el) {
         const box = el.getBoundingClientRect();
         document.documentElement.scrollTop += box.top;
+        document.body.scrollTop += box.top;
         this.toggleMenu();
       }
     }

@@ -48,7 +48,8 @@
 
   @media screen and (max-width: $mobile) {
     .menu__inner .menu__list .menu__item {
-      margin-bottom: $menuSpacingMobile;
+      margin-top: $menuSpacingMobile / 2;
+      margin-bottom: $menuSpacingMobile / 2;
     }
   }
 }
