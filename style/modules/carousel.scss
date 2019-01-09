@@ -35,19 +35,20 @@
 
       .carousel__slide {
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 1s;
-
-        &.active {
-          opacity: 1;
-        }
 
         img {
           height: 100%;
-          width: auto;
+          width: 100%;
+          object-fit: contain;
+          transition: transform 1s;
+          transform-origin: center;
+          transform: scale(0.8, 0.8);
+        }
+
+        &.active {
+          img {
+            transform: scale(1, 1);
+          }
         }
       }
     }

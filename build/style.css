@@ -447,17 +447,16 @@ h1, h2 {
       transition: 1s;
       height: 100%; }
       .carousel .carousel__inner .carousel__slider .carousel__slide {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 1s; }
-        .carousel .carousel__inner .carousel__slider .carousel__slide.active {
-          opacity: 1; }
+        height: 100%; }
         .carousel .carousel__inner .carousel__slider .carousel__slide img {
           height: 100%;
-          width: auto; }
+          width: 100%;
+          object-fit: contain;
+          transition: transform 1s;
+          transform-origin: center;
+          transform: scale(0.8, 0.8); }
+        .carousel .carousel__inner .carousel__slider .carousel__slide.active img {
+          transform: scale(1, 1); }
     .carousel .carousel__inner.transition-lock {
       transition: none; }
   .carousel .carousel__controls {
@@ -645,12 +644,27 @@ h1, h2 {
   left: 0;
   transform: translate(-75px, -50%); }
   .foreground-image img {
+    position: relative;
     height: 100%;
-    width: auto; }
+    width: auto;
+    z-index: 50; }
+  .foreground-image .foreground-image__shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: radial-gradient(rgba(28, 28, 28, 0.5), rgba(28, 28, 28, 0) 75%);
+    z-index: 49;
+    transform: translate(-20px, 20px); }
   @media screen and (max-width: 1100px) {
     .foreground-image {
       height: 65vh;
-      transform: translate(-50px, -50%); } }
+      transform: translate(-50px, -50%); }
+      .foreground-image img {
+        position: static; }
+      .foreground-image .foreground-image__shadow {
+        transform: translate(0, 10px); } }
   @media screen and (max-width: 800px) {
     .foreground-image {
       position: relative;
@@ -689,7 +703,7 @@ h1, h2 {
       .diptych.diptych--footer {
         margin-top: 25px; }
       .diptych.diptych--menu {
-        margin-top: 76px; } }
+        margin-top: 39px; } }
 
 .back-to-top {
   display: flex;
