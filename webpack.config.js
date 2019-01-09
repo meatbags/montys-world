@@ -1,14 +1,19 @@
 var path = require('path');
 var webpack = require('webpack');
-var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var appName = 'monty';
 var pathJS = './js/app.js';
 var pathSCSS = './style/main.js';
 var pathOutput = 'build';
+
+// JS
 var MinifyPlugin = require("babel-minify-webpack-plugin");
 
-module.exports = [
-{
+// CSS
+var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+var OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
+var moduleJS = {
   entry: {'app.min': pathJS},
   output: {
     library: appName,
@@ -32,7 +37,9 @@ module.exports = [
     new MinifyPlugin({}, {comments: false})
   ],
   stats: {colors: true, warnings: false}
-}, {
+};
+
+var moduleCSS = {
   entry: {'style.webpack': pathSCSS},
   output: {
     path: path.resolve(__dirname, pathOutput),
@@ -42,7 +49,10 @@ module.exports = [
     rules: [{
       test: /\.scss$/,
       use: [
-        MiniCssExtractPlugin.loader, {
+        {
+          loader: MiniCssExtractPlugin.loader,
+          options: {}
+        }, {
           loader: 'css-loader',
           options: {importLoaders: 2, sourceMap: true}
         }, {
@@ -52,5 +62,23 @@ module.exports = [
       ]
     }]
   },
-  plugins: [new MiniCssExtractPlugin({filename: "./style.css", allChunks: true})]
-}];
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "./style.css",
+      allChunks: true
+    })
+  ],
+  stats: {colors: true, warnings: false}
+}
+
+module.exports = [moduleJS, moduleCSS];
