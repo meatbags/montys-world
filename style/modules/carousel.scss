@@ -16,7 +16,7 @@
   }
 
   .carousel__inner {
-    width: 45vw;
+    width: 48vw;
     height: 60vh;
     top: 0;
     left: 0;
@@ -38,6 +38,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 0;
+        transition: opacity 1s;
+
+        &.active {
+          opacity: 1;
+        }
 
         img {
           height: 100%;
@@ -69,7 +75,7 @@
       font-size: $fontMedium;
       position: absolute;
       top: 0;
-      right: $space * 2;
+      right: $space * 8;
     }
   }
 
@@ -99,6 +105,10 @@
     .carousel__controls {
       margin-bottom: $space * 2;
       justify-content: flex-start;
+
+      .carousel__counter {
+        right: $space * 2;
+      }
     }
   }
 }

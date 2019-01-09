@@ -426,7 +426,7 @@ h1, h2 {
   .carousel.active {
     opacity: 1; }
   .carousel .carousel__inner {
-    width: 45vw;
+    width: 48vw;
     height: 60vh;
     top: 0;
     left: 0;
@@ -445,7 +445,11 @@ h1, h2 {
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        opacity: 0;
+        transition: opacity 1s; }
+        .carousel .carousel__inner .carousel__slider .carousel__slide.active {
+          opacity: 1; }
         .carousel .carousel__inner .carousel__slider .carousel__slide img {
           height: 100%;
           width: auto; }
@@ -469,7 +473,7 @@ h1, h2 {
       font-size: 20px;
       position: absolute;
       top: 0;
-      right: 20px; }
+      right: 80px; }
   @media screen and (max-width: 1100px) {
     .carousel {
       transform: translate(-20vw, -50%); }
@@ -490,7 +494,9 @@ h1, h2 {
         height: 35vh; }
       .carousel .carousel__controls {
         margin-bottom: 20px;
-        justify-content: flex-start; } }
+        justify-content: flex-start; }
+        .carousel .carousel__controls .carousel__counter {
+          right: 20px; } }
 
 @keyframes loop {
   0% {

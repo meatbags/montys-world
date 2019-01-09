@@ -52,7 +52,8 @@ class Carousel {
     const childRect = this.target.slides[this.currentIndex].getBoundingClientRect();
     const dx = parentRect.left - childRect.left;
     this.target.slider.style.transform = `translateX(${dx}px)`;
-    //console.log(parentRect.left, childRect.left, dx);
+    this.target.slider.querySelectorAll('.active').forEach(el => { el.classList.remove('active'); });
+    this.target.slides[this.currentIndex].classList.add('active');
   }
 
   resize() {
