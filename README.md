@@ -2,4 +2,4 @@
 
 Monty's World mockup for Cypha.
 
-(Live example)[http://xavierburrow.com/temp/monty/]
+[Live Example](http://xavierburrow.com/temp/monty/)
